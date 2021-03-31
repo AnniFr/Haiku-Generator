@@ -20,8 +20,13 @@ const futureVerbs = [
     { word: 'program', syllables: 2 },
     { word: 'become', syllables: 2 },
     { word: 'concentrate', syllables: 3 },
+    { word: 'celebrate', syllables: 3 },
+    { word: 'adventure', syllables: 3 },
+    { word: 'abdicate', syllables: 3 },
+    { word: 'holiday', syllables: 3 },
     { word: 'pretend', syllables: 2 },
     { word: 'imagine', syllables: 3 },
+    { word: 'procrastinate', syllables: 4 },
     ];
 
  const presentVerbs = [
@@ -47,11 +52,11 @@ const futureVerbs = [
     ];
 
 const nouns = [
-    { word: 'tree', syllables: 1 },
-    { word: 'cat', syllables: 1 },
-    { word: 'dog', syllables: 1 },
-    { word: 'bear', syllables: 1 },
-    { word: 'frog', syllables: 1 },
+    { word: 'a tree', syllables: 2 },
+    { word: 'the cat', syllables: 2 },
+    { word: 'the dog', syllables: 2 },
+    { word: 'this bear', syllables: 2 },
+    { word: 'the frogs', syllables: 2 },
     { word: 'jar', syllables: 1 },
     { word: 'eye', syllables: 1 },
     { word: 'bird', syllables: 1 },
@@ -66,7 +71,7 @@ const nouns = [
     { word: 'water', syllables: 2 },
     { word: 'fire', syllables: 2 },
     { word: 'bubble', syllables: 2 },
-    { word: 'knowledge', syllables: 2 },
+    { word: 'goblin', syllables: 2 },
     { word: 'hamster', syllables: 2 },
     { word: 'fantasy', syllables: 3 },
     { word: 'computer', syllables: 3 },
@@ -129,8 +134,61 @@ const adverbs = [
     { word: 'mysteriously', syllables: 5 },
     ];        
 
+    const conjunctions = [
+        { word: 'if', syllables: 1 },
+        { word: 'for', syllables: 1 },
+        { word: 'but', syllables: 1 },
+        { word: 'while', syllables: 1 },
+        { word: 'as', syllables: 1 },
+        { word: 'yet', syllables: 1 },
+        { word: 'so', syllables: 1 },
+        { word: 'after', syllables: 2 },
+        { word: 'since', syllables: 1 },
+        { word: 'until', syllables: 2 },
+        { word: 'when', syllables: 1 },
+        { word: 'even if', syllables: 2 },
+        { word: 'because', syllables: 2 },
+        { word: 'wherever', syllables: 3 },
+        { word: 'before', syllables: 2 },
+        { word: 'unless', syllables: 1 },
+        { word: 'as if', syllables: 2 },
+        ];   
 
+    const pronouns = [
+        { word: 'I', syllables: 1 },
+        { word: 'we', syllables: 1 },
+        { word: 'they', syllables: 1 },
+        { word: 'she', syllables: 1 },
+        { word: 'it', syllables: 1 },
+        { word: 'he', syllables: 1 },
+        { word: 'I am', syllables: 2 },
+        { word: 'we were', syllables: 2 },
+        { word: 'they did', syllables: 2 },
+        { word: 'she was', syllables: 2 },
+        { word: 'it is', syllables: 2 },
+        { word: 'he is', syllables: 2 },
+        ];   
+
+
+const randomArrayIndexPicker = (arr) => {
+    let index = Math.floor(Math.random()*arr.length);
+    return arr[index];
+}
+
+//function to pick a random element from an array, with a specific number of syllables
+// starts by creating a temp array of only matching syl elements
+const findRightSyllables = (arr, syllablesNeeded) => {
+    let sylArray = arr.filter(word => word.syllables === syllablesNeeded)
+//then picks a random one from the new array and returns it's word key
+    const randomObj = randomArrayIndexPicker(sylArray)
+    return randomObj.word
+    };
+
+    //console.log(findRightSyllables(adverbs, 5))
+    
 //access key of object in the array using arrayName[index of object].key
-console.log(`When ${nouns[10].word}s ${futureVerbs[14].word},`)
-console.log(`We will ${adverbs[18].word} ${futureVerbs[17].word}`)
-console.log(`That we are ${presentVerbs[8].word}.`)
+
+//could write a function that picks these and randomizes the syllable dist
+console.log(`${findRightSyllables(conjunctions, 1)} ${findRightSyllables(nouns, 2)}s ${findRightSyllables(futureVerbs, 3)},`)
+console.log(`${findRightSyllables(pronouns, 2)} ${findRightSyllables(adverbs, 2)} ${findRightSyllables(futureVerbs, 3)}`)
+console.log(`${findRightSyllables(pronouns, 2)} ${findRightSyllables(presentVerbs, 3)}.`)
