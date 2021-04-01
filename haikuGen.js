@@ -128,31 +128,12 @@ const r = (arr) => {
     return arr[index];
 }
 
-//specific functions for each type of word
-const verbFunc = () => {
-    let index = Math.floor(Math.random() * presentVerbs.length);
-    return presentVerbs[index];
+//generic function which takes the kind of word needed as an argument. 
+const wordFunc = (arr) => {
+    let index = Math.floor(Math.random() * arr.length);
+    return arr[index];
 }
 
-const nounFunc = () => {
-    let index = Math.floor(Math.random() * nouns.length);
-    return nouns[index];
-}
-
-const adjectiveFunc = () => {
-    let index = Math.floor(Math.random() * adjectives.length);
-    return adjectives[index];
-}
-
-const adverbFunc = () => {
-    let index = Math.floor(Math.random() * adverbs.length);
-    return adverbs[index];
-}
-
-const fillerFunc = () => {
-    let index = Math.floor(Math.random() * filler.length);
-    return filler[index];
-}
 
 const pGen = (percent) => {
     if (Math.floor(Math.random() * (100 / percent)) === 0) {
@@ -174,7 +155,7 @@ const line1 = () => {
     let word5;
 
     //word 1
-    word1 = nounFunc();
+    word1 = wordFunc(nouns);
     let sentence = word1.word;
     syllableCount = word1.syllables;
     //test if 5 syllables reached
@@ -196,7 +177,7 @@ const line1 = () => {
         word2 = art
     } else {
         do{
-        word2 = adjectiveFunc();
+        word2 = wordFunc(adjectives);
         testCount = syllableCount + word2.syllables;}
         while(testCount > 5)
     }
@@ -207,7 +188,7 @@ const line1 = () => {
 
         //word3 
         do{
-            word3 = verbFunc();
+            word3 = wordFunc(presentVerbs);
             testCount = syllableCount + word3.syllables;}
             while(testCount > 5)
 
@@ -217,7 +198,7 @@ const line1 = () => {
 
             //word 4
             do{
-                word4 = adverbFunc();
+                word4 = wordFunc(adverbs);
                 testCount = syllableCount + word4.syllables;}
                 while(testCount > 5)
     
@@ -240,7 +221,7 @@ const line2 = () => {
     let word5;
 
     //word 1
-    word1 = nounFunc();
+    word1 = wordFunc(nouns);
     let sentence = word1.word;
     syllableCount = word1.syllables;
 
@@ -263,7 +244,7 @@ const line2 = () => {
         word2 = art
     } else {
         do{
-        word2 = adjectiveFunc();
+        word2 = wordFunc(adjectives);
         testCount = syllableCount + word2.syllables;}
         while(testCount > 7)
 
@@ -275,7 +256,7 @@ const line2 = () => {
 
         //word3 
         do{
-            word3 = verbFunc();
+            word3 = wordFunc(presentVerbs);
             testCount = syllableCount + word3.syllables;}
             while(testCount > 7)
 
@@ -285,7 +266,7 @@ const line2 = () => {
 
             //word 4
             do{
-                word4 = adverbFunc();
+                word4 = wordFunc(adverbs);
                 testCount = syllableCount + word4.syllables;}
                 while(testCount > 7)
     
@@ -295,7 +276,7 @@ const line2 = () => {
 
                 //word 5
                 do{
-                    word5 = fillerFunc();
+                    word5 = wordFunc(filler);
                     testCount = syllableCount + word5.syllables;}
                     while(testCount > 7)
         
