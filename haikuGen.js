@@ -290,12 +290,17 @@ const line2 = () => {
 }
 }
 
-//for(let i = 0; i<100; i++) {
-console.log(line1())
-console.log(line2())
-console.log(line1())
-//};
+const createHaiku = () => {
+    let haiku1 = line1();
+    haiku1 = haiku1.charAt(0).toUpperCase() + haiku1.slice(1);
+    let haiku2 = line2();
+    haiku2 = haiku2.charAt(0).toUpperCase() + haiku2.slice(1);
+    let haiku3 = line1();
+    haiku3 = haiku3.charAt(0).toUpperCase() + haiku3.slice(1);
+    console.log(haiku1)
+    console.log(haiku2)
+    console.log(haiku3 + '.')
+}
 
 
-
-
+createHaiku()
