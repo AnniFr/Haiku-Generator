@@ -11,10 +11,12 @@ This is a Haiku Generator developed by two Codecademy students based on the Mixe
 ### General Info
 A haiku is a short three line poem where the number of syllables per line must always be 5,7,5.
 
-For example:
-*An old silent pond
-A frog jumps into the pond-
-Splash! Silence again.*
+*An old silent pond*
+
+*A frog jumps into the pond-*
+
+*Splash! Silence again.*
+
 -Matsuo Basho
 
 ### Technologies
