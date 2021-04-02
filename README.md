@@ -23,6 +23,8 @@ A haiku is a short three line poem where the number of syllables per line must a
 ### Technologies
 Project is created with: 
 - Javascript ES6
+- HTML 5
+- CSS
 
 ### Setup
 - Download the code and all related files
