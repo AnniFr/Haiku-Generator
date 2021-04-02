@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <body style="text-align: center;">
 
 <h1>Haiku Generator</h1>
@@ -16,20 +15,6 @@
 
 <script>
 const verbs = [
-{ word: 'eats', syllables: 1},
-    { word: 'sees', syllables: 1},
-    { word: 'takes', syllables: 1},
-    { word: 'runs', syllables: 1},
-    { word: 'bakes', syllables: 1},
-    { word: 'tastes', syllables: 1},
-    { word: 'shouts', syllables: 1},
-    { word: 'probes', syllables: 1},
-    { word: 'chokes', syllables: 1},
-    { word: 'licks', syllables: 1},
-    { word: 'speaks', syllables: 1},
-    { word: 'hears', syllables: 1},
-    { word: 'flees', syllables: 1},
-    
     { word: 'running', syllables: 2 },
     { word: 'jumping', syllables: 2 },
     { word: 'flying', syllables: 2 },
@@ -282,6 +267,8 @@ const adjectives = [
     { word: 'sullen', syllables: 2 },
     { word: 'humble', syllables: 2 },
 
+
+    
     ];
 
 const adverbs = [
@@ -552,22 +539,4 @@ function myFunction() {
 </script>
 
 </body>
-
-<audio autoplay><source src="./images/bensound-relaxing.mp3" type="audio/mp3">
-Your browser does not support this audio element. Apologies!</audio>
-<script src="haikuGen.js" defer></script>
-    <head>
-        <link href="./style.css" type="text/css" rel="stylesheet">
-        <title>Haiku Generator</title>
-    </head>
-    <body>
-        <h1>Haiku Generator</h1>
-        <h3 id="test">Click on the button to generate a random Haiku!</h3>
-        <button onclick="createHaiku()">Haiku Me!</button>
-        <br>
-    </body>
-    <div id="line1"></div>
-    <div id="line2"></div>
-    <div id="line3"></div>
-
 </html>

@@ -7,7 +7,6 @@ This is a Haiku Generator developed by two Codecademy students based on the Mixe
 - Technologies
 - Setup
 - Status
-- Credits
 
 ### General Info
 A haiku is a short three line poem where the number of syllables per line must always be 5,7,5.
@@ -23,17 +22,11 @@ A haiku is a short three line poem where the number of syllables per line must a
 ### Technologies
 Project is created with: 
 - Javascript ES6
-- HTML 5
-- CSS
 
 ### Setup
-- Download the code and all related files
-- Locate the folder on your system
-- Double click index.html to launch in your browser
+TBC
 
 ### Status
-Project is complete, but may see future updates. 
+Project still in development.
 
-### Credits
-Audio used is Royalty Free Music from BenSound
 

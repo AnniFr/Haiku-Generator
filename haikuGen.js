@@ -1,19 +1,4 @@
-
 const verbs = [
-    { word: 'eats', syllables: 1},
-    { word: 'sees', syllables: 1},
-    { word: 'takes', syllables: 1},
-    { word: 'runs', syllables: 1},
-    { word: 'bakes', syllables: 1},
-    { word: 'tastes', syllables: 1},
-    { word: 'shouts', syllables: 1},
-    { word: 'probes', syllables: 1},
-    { word: 'chokes', syllables: 1},
-    { word: 'licks', syllables: 1},
-    { word: 'speaks', syllables: 1},
-    { word: 'hears', syllables: 1},
-    { word: 'flees', syllables: 1},
-
     { word: 'running', syllables: 2 },
     { word: 'jumping', syllables: 2 },
     { word: 'flying', syllables: 2 },
@@ -522,10 +507,11 @@ const createHaiku = () => {
     let haiku2 = line2();
     haiku2 = haiku2.charAt(0).toUpperCase() + haiku2.slice(1);
     let haiku3 = line1();
-    haiku3 = haiku3.charAt(0).toUpperCase() + haiku3.slice(1) + '.';
-    document.getElementById('line1').innerHTML = haiku1;
-    document.getElementById('line2').innerHTML = haiku2;
-    document.getElementById('line3').innerHTML = haiku3;
-    //return [haiku1, haiku2, haiku3];
-    
+    haiku3 = haiku3.charAt(0).toUpperCase() + haiku3.slice(1);
+    console.log(haiku1)
+    console.log(haiku2)
+    console.log(haiku3 + '.')
 }
+
+
+createHaiku()
